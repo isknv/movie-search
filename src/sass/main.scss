@@ -1,0 +1,154 @@
+body {
+  background: #282828;
+}
+
+a {
+  text-decoration: none;
+}
+
+p,
+ul {
+  list-style: none;
+  margin: 0;
+}
+
+.header__logo {
+  color: #888888a8;
+  font-size: 30px;
+  font-weight: 900;
+
+  &:hover,
+  &:focus {
+    color: #888888d5;
+  }
+}
+
+.form-control {
+  background: #282828;
+}
+
+.movies {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -30px;
+
+    .itemMovies {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+      margin-left: 30px;
+      width: 240px;
+
+      &:hover,
+      &:focus {
+        transform: scale(1.02);
+      }
+    }
+  }
+}
+
+.movie {
+  &__div {
+    &:hover,
+    &:focus {
+      box-shadow: 0 0 20px rgba(73, 73, 73, 0.158);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    @media screen and (min-width: 768px) {
+      height: 380px;
+    }
+  }
+
+  &__info {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding: 5px;
+  }
+
+  &__title {
+    font-family: "Roboto Mono", monospace;
+    color: rgb(184, 184, 184);
+    font-weight: 600;
+  }
+
+  &__category {
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    color: #757575;
+  }
+
+  &__rating {
+    font-weight: 700;
+    color: rgb(180, 180, 180);
+  }
+}
+
+.nav {
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+  background-color: #1f1f1f;
+}
+
+.rating--green {
+  color: green;
+}
+
+.rating--orange {
+  color: orange;
+}
+
+.rating--red {
+  color: red;
+}
+
+.load {
+  text-align: center;
+
+  &__button {
+    margin-top: 15px;
+    margin-bottom: 50px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(43, 43, 43, 0.6);
+  &__content {
+    background-color: #1f1f1f;
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 0 20px rgba(73, 73, 73, 0.158);
+  }
+}
+
